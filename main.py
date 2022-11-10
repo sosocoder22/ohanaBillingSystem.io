@@ -136,20 +136,20 @@ def send():
         root2=Toplevel()
 
         root2.title("Send Bill")
-        root2.config(bg='#AF7D00')
+        root2.config(bg='#F4DEDE')
         root2.geometry('485x620+50+50')
 
         logoImage=PhotoImage(file='sender.png')
         label=Label(root2,image=logoImage,bg='lightblue')
         label.pack(pady=5)
 
-        numberLabel=Label(root2,text='Mobile Number',font=('arial',18,'bold underline'),bg='red4',fg='white')
+        numberLabel=Label(root2,text='Mobile Number',font=('arial',18,'bold underline'),bg='red4',fg='#4F799F')
         numberLabel.pack(pady=5)
 
         numberfield=Entry(root2,font=('helvetica',22,'bold'),bd=3,width=24)
         numberfield.pack(pady=5)
 
-        billLabel = Label(root2, text='Bill Details', font=('arial', 18, 'bold underline'), bg='red4', fg='white')
+        billLabel = Label(root2, text='Bill Details', font=('arial', 18, 'bold underline'), bg='red4', fg='#4F799F')
         billLabel.pack(pady=5)
 
         textarea=Text(root2,font=('arial',12,'bold'),bd=3,width=42,height=14)
@@ -167,7 +167,7 @@ def send():
         textarea.insert(END, f'Service Tax\t\t\t{50}Rs\n')
         textarea.insert(END, f'Total Cost\t\t\t{subtotalofItems + 50}Rs\n')
 
-        sendButton=Button(root2,text='SEND',font=('arial',19,'bold'),bg='white',fg='red4',bd=7,relief=GROOVE
+        sendButton=Button(root2,text='SEND',font=('arial',19,'bold'),bg='#4F799F',fg='red4',bd=7,relief=GROOVE
                           ,command=send_msg)
         sendButton.pack(pady=5)
     
@@ -641,42 +641,42 @@ root.resizable(0,0)
 
 root.title(' Ohana Billing System created by Shiv Uchiha')
 
-root.config(bg='black')
+root.config(bg='#4F799F')
 
-topFrame=Frame(root,bd=10,relief=SUNKEN,bg='#AF7D00')
+topFrame=Frame(root,bd=10,relief=SUNKEN,bg='#FAF0E6')
 topFrame.pack(side=TOP)
 
-labelTitle=Label(topFrame,text='Ohana Billing System',font=('arial',30),fg='#AF7D00',bd=9,
-                 bg='black',width=51)
+labelTitle=Label(topFrame,text='Ohana Billing System',font=('arial',30),fg='#4F799F',bd=9,
+                 bg='#F4DEDE',width=51)
 labelTitle.grid(row=0,column=0)
 
 #frames
 
-menuFrame=Frame(root,bd=5,relief=SUNKEN,bg='#AF7D00')
+menuFrame=Frame(root,bd=5,relief=SUNKEN,bg='#F4DEDE')
 menuFrame.pack(side=LEFT)
 
-costFrame=Frame(menuFrame,bd=4,relief=SUNKEN,bg='black',pady=5)
+costFrame=Frame(menuFrame,bd=4,relief=SUNKEN,bg='#F4DEDE',pady=5)
 costFrame.pack(side=BOTTOM)
 
-foodFrame=LabelFrame(menuFrame,text='delicacies',bg="black",font=('arial',19,'bold'),bd=10,relief=SUNKEN,fg='white',)
+foodFrame=LabelFrame(menuFrame,text='delicacies',bg="#F4DEDE",font=('arial',19,'bold'),bd=10,relief=SUNKEN,fg='#4F799F',)
 foodFrame.pack(side=LEFT)
 
-drinksFrame=LabelFrame(menuFrame,text='beverages',bg="black",font=('arial',19,'bold'),bd=10,relief=SUNKEN,fg='white')
+drinksFrame=LabelFrame(menuFrame,text='beverages',bg="#F4DEDE",font=('arial',19,'bold'),bd=10,relief=SUNKEN,fg='#4F799F')
 drinksFrame.pack(side=LEFT)
 
-cakesFrame=LabelFrame(menuFrame,text='cakes',bg="black",font=('arial',19,'bold'),bd=10,relief=SUNKEN,fg='white')
+cakesFrame=LabelFrame(menuFrame,text='cakes',bg="#F4DEDE",font=('arial',19,'bold'),bd=10,relief=SUNKEN,fg='#4F799F')
 cakesFrame.pack(side=LEFT)
 
-rightFrame=Frame(root,bd=15,relief=RAISED,bg="black")
+rightFrame=Frame(root,bd=15,relief=RAISED,bg="#F4DEDE")
 rightFrame.pack(side=RIGHT)
 
-calculatorFrame=Frame(rightFrame,bd=1,relief=RAISED,bg="#AF7D00")
+calculatorFrame=Frame(rightFrame,bd=1,relief=RAISED,bg="#F4DEDE")
 calculatorFrame.pack()
 
-recieptFrame=Frame(rightFrame,bd=4,relief=RAISED,bg="#AF7D00")
+recieptFrame=Frame(rightFrame,bd=4,relief=RAISED,bg="#F4DEDE")
 recieptFrame.pack()
 
-buttonFrame=Frame(rightFrame,bd=3,relief=RAISED,bg="#AF7D00")
+buttonFrame=Frame(rightFrame,bd=3,relief=RAISED,bg="#F4DEDE")
 buttonFrame.pack()
 
 #Variables
@@ -778,39 +778,39 @@ e_vanilla.set('0')
 
 ##FOOD
 
-momo=Checkbutton(foodFrame,text='Momo',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var1
+momo=Checkbutton(foodFrame,text='Momo',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var1
                  ,command=momo)
 momo.grid(row=0,column=0,sticky=W)
 
-sekuwa=Checkbutton(foodFrame,text='sekuwa',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var2
+sekuwa=Checkbutton(foodFrame,text='sekuwa',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var2
                  ,command=sekuwa)
 sekuwa.grid(row=1,column=0,sticky=W)
 
-fish=Checkbutton(foodFrame,text='Fish',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var3
+fish=Checkbutton(foodFrame,text='Fish',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var3
                  ,command=fish)
 fish.grid(row=2,column=0,sticky=W)
 
-sabji=Checkbutton(foodFrame,text='Sabji',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var4
+sabji=Checkbutton(foodFrame,text='Sabji',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var4
                   ,command=sabji)
 sabji.grid(row=3,column=0,sticky=W)
 
-thakali=Checkbutton(foodFrame,text='thakali',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var5
+thakali=Checkbutton(foodFrame,text='thakali',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var5
                   ,command=thakali)
 thakali.grid(row=4,column=0,sticky=W)
 
-plain_rice=Checkbutton(foodFrame,text='plain_rice',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var6
+plain_rice=Checkbutton(foodFrame,text='plain_rice',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var6
                    ,command=plain_rice)
 plain_rice.grid(row=5,column=0,sticky=W)
 
-mutton=Checkbutton(foodFrame,text='Mutton',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var7,
+mutton=Checkbutton(foodFrame,text='Mutton',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var7,
                    command=mutton)
 mutton.grid(row=6,column=0,sticky=W)
 
-paneer=Checkbutton(foodFrame,text='Paneer',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var8
+paneer=Checkbutton(foodFrame,text='Paneer',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var8
                    ,command=paneer)
 paneer.grid(row=7,column=0,sticky=W)
 
-chicken=Checkbutton(foodFrame,text='Chicken',bg="black",fg="#AF7D00",font=('arial',18,'bold',),onvalue=1,offvalue=0,variable=var9
+chicken=Checkbutton(foodFrame,text='Chicken',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold',),onvalue=1,offvalue=0,variable=var9
                     ,command=chicken)
 chicken.grid(row=8,column=0,sticky=W)
 
@@ -845,39 +845,39 @@ textchicken.grid(row=8, column=1)
 
 #Drinks
 
-lassi=Checkbutton(drinksFrame,text='Lassi',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var10
+lassi=Checkbutton(drinksFrame,text='Lassi',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var10
                   ,command=lassi)
 lassi.grid(row=0,column=0,sticky=W)
 
-coffee=Checkbutton(drinksFrame,text='Coffee',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var11
+coffee=Checkbutton(drinksFrame,text='Coffee',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var11
                    ,command=coffee)
 coffee.grid(row=1,column=0,sticky=W)
 
-hot_chocolate=Checkbutton(drinksFrame,text='Hot Chocolate',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var12
+hot_chocolate=Checkbutton(drinksFrame,text='Hot Chocolate',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var12
                    ,command=hot_chocolate)
 hot_chocolate.grid(row=2,column=0,sticky=W)
 
-peach_iced_tea=Checkbutton(drinksFrame,text='peachicedtea',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var13
+peach_iced_tea=Checkbutton(drinksFrame,text='peachicedtea',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var13
                      ,command=peach_iced_tea)
 peach_iced_tea.grid(row=3,column=0,sticky=W)
 
-blue_ocean=Checkbutton(drinksFrame,text='blue_ocean',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var14
+blue_ocean=Checkbutton(drinksFrame,text='blue_ocean',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var14
                      ,command=blue_ocean)
 blue_ocean.grid(row=4,column=0,sticky=W)
 
-afocado=Checkbutton(drinksFrame,text='afocado',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var15
+afocado=Checkbutton(drinksFrame,text='afocado',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var15
                      ,command=afocado)
 afocado.grid(row=5,column=0,sticky=W)
 
-masalatea=Checkbutton(drinksFrame,text='Masala Tea',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var16
+masalatea=Checkbutton(drinksFrame,text='Masala Tea',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var16
                       ,command=masalatea)
 masalatea.grid(row=6,column=0,sticky=W)
 
-vanilla_latte=Checkbutton(drinksFrame,text='vanilla latte',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var17
+vanilla_latte=Checkbutton(drinksFrame,text='vanilla latte',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var17
                       ,command=vanilla_latte)
 vanilla_latte.grid(row=7,column=0,sticky=W)
 
-colddrinks=Checkbutton(drinksFrame,text='Cold Drinks',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var18
+colddrinks=Checkbutton(drinksFrame,text='Cold Drinks',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var18
                        ,command=colddrinks)
 colddrinks.grid(row=8,column=0,sticky=W)
 
@@ -912,39 +912,39 @@ textcolddrinks.grid(row=8, column=1)
 
 #Cakes
 
-oreocake=Checkbutton(cakesFrame,text='Oreo',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var19
+oreocake=Checkbutton(cakesFrame,text='Oreo',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var19
                      ,command=oreo)
 oreocake.grid(row=0,column=0,sticky=W)
 
-applecake=Checkbutton(cakesFrame,text='Apple',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var20
+applecake=Checkbutton(cakesFrame,text='Apple',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var20
                       ,command=apple)
 applecake.grid(row=1,column=0,sticky=W)
 
-kitkatcake=Checkbutton(cakesFrame,text='Kitkat',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var21
+kitkatcake=Checkbutton(cakesFrame,text='Kitkat',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var21
                        ,command=kitkat)
 kitkatcake.grid(row=2,column=0,sticky=W)
 
-vanillacake=Checkbutton(cakesFrame,text='Vanilla',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var22
+vanillacake=Checkbutton(cakesFrame,text='Vanilla',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var22
                         ,command=vanilla)
 vanillacake.grid(row=3,column=0,sticky=W)
 
-bananacake=Checkbutton(cakesFrame,text='Banana',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var23
+bananacake=Checkbutton(cakesFrame,text='Banana',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var23
                        ,command=banana)
 bananacake.grid(row=4,column=0,sticky=W)
 
-browniecake=Checkbutton(cakesFrame,text='Brownie',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var24
+browniecake=Checkbutton(cakesFrame,text='Brownie',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var24
                         ,command=brownie)
 browniecake.grid(row=5,column=0,sticky=W)
 
-pineapplecake=Checkbutton(cakesFrame,text='Pineapple',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var25
+pineapplecake=Checkbutton(cakesFrame,text='Pineapple',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var25
                           ,command=pineapple)
 pineapplecake.grid(row=6,column=0,sticky=W)
 
-chocolatecake=Checkbutton(cakesFrame,text='Chocolate',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var26
+chocolatecake=Checkbutton(cakesFrame,text='Chocolate',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var26
                           ,command=chocolate)
 chocolatecake.grid(row=7,column=0,sticky=W)
 
-blackforestcake=Checkbutton(cakesFrame,text='Black Forest',bg="black",fg="#AF7D00",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var27
+blackforestcake=Checkbutton(cakesFrame,text='Black Forest',bg="#F4DEDE",fg="#4F799F",font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var27
                             ,command=blackforest)
 blackforestcake.grid(row=8,column=0,sticky=W)
 
@@ -979,37 +979,37 @@ textblackforest.grid(row=8, column=1)
 
 #costlabels & entry fields
 
-labelCostofFood=Label(costFrame,text='Cost of Food',font=('arial',16,'bold'),bg='#AF7D00',fg='white')
+labelCostofFood=Label(costFrame,text='Cost of Food',font=('arial',16,'bold'),bg='#F4DEDE',fg='#4F799F')
 labelCostofFood.grid(row=0,column=0)
 
 textCostofFood=Entry(costFrame,font=('arial',16,'bold'),bd=6,width=14,state='readonly',textvariable=costoffoodvar)
 textCostofFood.grid(row=0,column=1,padx=41)
 
-labelCostofDrinks=Label(costFrame,text='Cost of Drinks',font=('arial',16,'bold'),bg='#AF7D00',fg='white')
+labelCostofDrinks=Label(costFrame,text='Cost of Drinks',font=('arial',16,'bold'),bg='#F4DEDE',fg='#4F799F')
 labelCostofDrinks.grid(row=1,column=0)
 
 textCostofDrinks=Entry(costFrame,font=('arial',16,'bold'),bd=6,width=14,state='readonly',textvariable=costofdrinksvar)
 textCostofDrinks.grid(row=1,column=1,padx=41)
 
-labelCostofCakes=Label(costFrame,text='Cost of Cakes',font=('arial',16,'bold'),bg='#AF7D00',fg='white')
+labelCostofCakes=Label(costFrame,text='Cost of Cakes',font=('arial',16,'bold'),bg='#F4DEDE',fg='#4F799F')
 labelCostofCakes.grid(row=2,column=0)
 
 textCostofCakes=Entry(costFrame,font=('arial',16,'bold'),bd=6,width=14,state='readonly',textvariable=costofcakesvar)
 textCostofCakes.grid(row=2,column=1,padx=41)
 
-labelSubTotal=Label(costFrame,text='Sub Total',font=('arial',16,'bold'),bg='#AF7D00',fg='white')
+labelSubTotal=Label(costFrame,text='Sub Total',font=('arial',16,'bold'),bg='#F4DEDE',fg='#4F799F')
 labelSubTotal.grid(row=0,column=2)
 
 textSubTotal=Entry(costFrame,font=('arial',16,'bold'),bd=6,width=14,state='readonly',textvariable=subtotalvar)
 textSubTotal.grid(row=0,column=3,padx=41)
 
-labelServiceTax=Label(costFrame,text='Service Tax',font=('arial',16,'bold'),bg='#AF7D00',fg='white')
+labelServiceTax=Label(costFrame,text='Service Tax',font=('arial',16,'bold'),bg='#F4DEDE',fg='#4F799F')
 labelServiceTax.grid(row=1,column=2)
 
 textServiceTax=Entry(costFrame,font=('arial',16,'bold'),bd=6,width=14,state='readonly',textvariable=servicetaxvar)
 textServiceTax.grid(row=1,column=3,padx=41)
 
-labelTotalCost=Label(costFrame,text='Total Cost',font=('arial',16,'bold'),bg='#AF7D00',fg='white')
+labelTotalCost=Label(costFrame,text='Total Cost',font=('arial',16,'bold'),bg='#F4DEDE',fg='#4F799F')
 labelTotalCost.grid(row=2,column=2)
 
 textTotalCost=Entry(costFrame,font=('arial',16,'bold'),bd=6,width=14,state='readonly',textvariable=totalcostvar)
@@ -1017,22 +1017,22 @@ textTotalCost.grid(row=2,column=3,padx=41)
 
 #Buttons
 
-buttonTotal=Button(buttonFrame,text='Total',font=('arial',14,'bold'),bg="black",fg="#AF7D00",bd=6,padx=10,
+buttonTotal=Button(buttonFrame,text='Total',font=('arial',14,'bold'),bg="black",fg="#F4DEDE",bd=6,padx=10,
                    command=totalcost)
 buttonTotal.grid(row=0,column=0)
 
-buttonReceipt=Button(buttonFrame,text='Receipt',font=('arial',14,'bold'),bg="black",fg="#AF7D00",bd=6,padx=10
+buttonReceipt=Button(buttonFrame,text='Receipt',font=('arial',14,'bold'),bg="black",fg="#F4DEDE",bd=6,padx=10
                      ,command=receipt)
 buttonReceipt.grid(row=0,column=1)
 
-buttonSave=Button(buttonFrame,text='Save',font=('arial',14,'bold'),bg="black",fg="#AF7D00",bd=6,padx=10
+buttonSave=Button(buttonFrame,text='Save',font=('arial',14,'bold'),bg="black",fg="#F4DEDE",bd=6,padx=10
                   ,command=save)
 buttonSave.grid(row=0,column=2)
 
-##buttonSend=Button(buttonFrame,text='Send',font=('arial',14,'bold'),bg="black",fg="#AF7D00",bd=4,padx=5,command=send)
+##buttonSend=Button(buttonFrame,text='Send',font=('arial',14,'bold'),bg="black",fg="#F4DEDE",bd=4,padx=5,command=send)
 ##buttonSend.grid(row=0,column=3)
 
-buttonReset=Button(buttonFrame,text='Reset',font=('arial',14,'bold'),bg="black",fg="#AF7D00",bd=6,padx=10,
+buttonReset=Button(buttonFrame,text='Reset',font=('arial',14,'bold'),bg="black",fg="#F4DEDE",bd=6,padx=10,
                    command=reset)
 buttonReset.grid(row=0,column=4)
 
@@ -1066,67 +1066,67 @@ def answer():
 calculatorField=Entry(calculatorFrame,font=('arial',16,'bold'),width=32,bd=4)
 calculatorField.grid(row=0,column=0,columnspan=4)
 
-button7=Button(calculatorFrame,text='7',font=('arial',16,'bold'),fg='#AF7D00',bg='black',bd=6,width=6,
+button7=Button(calculatorFrame,text='7',font=('arial',16,'bold'),fg='#F4DEDE',bg='black',bd=6,width=6,
                command=lambda:buttonClick('7'))
 button7.grid(row=1,column=0)
 
-button8=Button(calculatorFrame,text='8',font=('arial',16,'bold'),fg='#AF7D00',bg='black',bd=6,width=6,
+button8=Button(calculatorFrame,text='8',font=('arial',16,'bold'),fg='#F4DEDE',bg='black',bd=6,width=6,
                command=lambda:buttonClick('8'))
 button8.grid(row=1,column=1)
 
-button9=Button(calculatorFrame,text='9',font=('arial',16,'bold'),fg='#AF7D00',bg='black',bd=6,width=6
+button9=Button(calculatorFrame,text='9',font=('arial',16,'bold'),fg='#F4DEDE',bg='black',bd=6,width=6
                ,command=lambda:buttonClick('9'))
 button9.grid(row=1,column=2)
 
-buttonPlus=Button(calculatorFrame,text='+',font=('arial',16,'bold'),fg='#AF7D00',bg='black',bd=6,width=6
+buttonPlus=Button(calculatorFrame,text='+',font=('arial',16,'bold'),fg='#F4DEDE',bg='black',bd=6,width=6
                   ,command=lambda:buttonClick('+'))
 buttonPlus.grid(row=1,column=3)
 
-button4=Button(calculatorFrame,text='4',font=('arial',16,'bold'),fg='#AF7D00',bg='black',bd=6,width=6
+button4=Button(calculatorFrame,text='4',font=('arial',16,'bold'),fg='#F4DEDE',bg='black',bd=6,width=6
                ,command=lambda:buttonClick('4'))
 button4.grid(row=2,column=0)
 
-button5=Button(calculatorFrame,text='5',font=('arial',16,'bold'),fg='#AF7D00',bg='white',bd=6,width=6
+button5=Button(calculatorFrame,text='5',font=('arial',16,'bold'),fg='#F4DEDE',bg='#4F799F',bd=6,width=6
                ,command=lambda:buttonClick('5'))
 button5.grid(row=2,column=1)
 
-button6=Button(calculatorFrame,text='6',font=('arial',16,'bold'),fg='#AF7D00',bg='white',bd=6,width=6
+button6=Button(calculatorFrame,text='6',font=('arial',16,'bold'),fg='#F4DEDE',bg='#4F799F',bd=6,width=6
                ,command=lambda:buttonClick('6'))
 button6.grid(row=2,column=2)
 
-buttonMinus=Button(calculatorFrame,text='-',font=('arial',16,'bold'),fg='#AF7D00',bg='black',bd=6,width=6
+buttonMinus=Button(calculatorFrame,text='-',font=('arial',16,'bold'),fg='#F4DEDE',bg='black',bd=6,width=6
                    ,command=lambda:buttonClick('-'))
 buttonMinus.grid(row=2,column=3)
 
-button1=Button(calculatorFrame,text='1',font=('arial',16,'bold'),fg='#AF7D00',bg='black',bd=6,width=6
+button1=Button(calculatorFrame,text='1',font=('arial',16,'bold'),fg='#F4DEDE',bg='black',bd=6,width=6
                ,command=lambda:buttonClick('1'))
 button1.grid(row=3,column=0)
 
-button2=Button(calculatorFrame,text='2',font=('arial',16,'bold'),fg='#AF7D00',bg='white',bd=6,width=6
+button2=Button(calculatorFrame,text='2',font=('arial',16,'bold'),fg='#F4DEDE',bg='#4F799F',bd=6,width=6
                ,command=lambda:buttonClick('2'))
 button2.grid(row=3,column=1)
 
-button3=Button(calculatorFrame,text='3',font=('arial',16,'bold'),fg='#AF7D00',bg='white',bd=6,width=6
+button3=Button(calculatorFrame,text='3',font=('arial',16,'bold'),fg='#F4DEDE',bg='#4F799F',bd=6,width=6
                ,command=lambda:buttonClick('3'))
 button3.grid(row=3,column=2)
 
-buttonMult=Button(calculatorFrame,text='*',font=('arial',16,'bold'),fg='#AF7D00',bg='black',bd=6,width=6
+buttonMult=Button(calculatorFrame,text='*',font=('arial',16,'bold'),fg='#F4DEDE',bg='black',bd=6,width=6
                   ,command=lambda:buttonClick('*'))
 buttonMult.grid(row=3,column=3)
 
-buttonAns=Button(calculatorFrame,text='Ans',font=('arial',16,'bold'),fg='#AF7D00',bg='black',bd=6,width=6,
+buttonAns=Button(calculatorFrame,text='Ans',font=('arial',16,'bold'),fg='#F4DEDE',bg='black',bd=6,width=6,
                  command=answer)
 buttonAns.grid(row=4,column=0)
 
-buttonClear=Button(calculatorFrame,text='Clear',font=('arial',16,'bold'),fg='#AF7D00',bg='black',bd=6,width=6
+buttonClear=Button(calculatorFrame,text='Clear',font=('arial',16,'bold'),fg='#F4DEDE',bg='black',bd=6,width=6
                    ,command=clear)
 buttonClear.grid(row=4,column=1)
 
-button0=Button(calculatorFrame,text='0',font=('arial',16,'bold'),fg='#AF7D00',bg='black',bd=6,width=6
+button0=Button(calculatorFrame,text='0',font=('arial',16,'bold'),fg='#F4DEDE',bg='black',bd=6,width=6
                ,command=lambda:buttonClick('0'))
 button0.grid(row=4,column=2)
 
-buttonDiv=Button(calculatorFrame,text='/',font=('arial',16,'bold'),fg='#AF7D00',bg='black',bd=6,width=6,
+buttonDiv=Button(calculatorFrame,text='/',font=('arial',16,'bold'),fg='#F4DEDE',bg='black',bd=6,width=6,
                  command=lambda:buttonClick('/'))
 buttonDiv.grid(row=4,column=3)
 
